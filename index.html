@@ -56,7 +56,6 @@
   <body
     class="bg-white dark:bg-black text-gray-900 dark:text-white font-sans flex"
   >
-    <!-- Sidebar -->
     <aside
       class="w-64 bg-white dark:bg-gray-900 shadow-md p-6 flex flex-col justify-between min-h-screen"
     >
@@ -86,7 +85,6 @@
       </div>
     </aside>
 
-    <!-- Main Content -->
     <main class="flex-1 p-10">
       <header class="mb-10">
         <h1 class="text-5xl font-extrabold mb-4 tracking-tight">
@@ -97,7 +95,6 @@
         </p>
       </header>
 
-      <!-- Search Form -->
       <div class="flex mb-6 max-w-xl">
         <input
           id="search-input"
@@ -113,7 +110,6 @@
         </button>
       </div>
 
-      <!-- Filter Dropdowns -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10 max-w-4xl">
         <select
           id="filter-category"
@@ -123,16 +119,12 @@
         </select>
       </div>
 
-      <!-- Recipes Grid -->
       <section
         id="meal-list"
         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
-      >
-        <!-- Recipes will appear here -->
-      </section>
+      ></section>
     </main>
 
-    <!-- Script: Search + Filter + Favorite -->
     <script src="script.js"></script>
     <script>
       // Load dropdown options

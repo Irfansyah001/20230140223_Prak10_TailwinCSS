@@ -50,7 +50,6 @@ function removeFromFavorites(idMeal, button) {
   }
 }
 
-// Tampilkan modal detail resep (dengan klik luar modal)
 function showMealDetails(mealId) {
   fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`)
     .then((res) => res.json())

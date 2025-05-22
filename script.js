@@ -1,7 +1,5 @@
-// Trigger search saat tombol diklik
 document.getElementById("search-btn").addEventListener("click", searchMeal);
 
-// Trigger search saat tekan Enter di input
 document
   .getElementById("search-input")
   .addEventListener("keydown", function (event) {
@@ -11,7 +9,6 @@ document
     }
   });
 
-// Fungsi pencarian resep
 function searchMeal() {
   const query = document.getElementById("search-input").value.trim();
   if (!query) return;
@@ -47,7 +44,6 @@ function searchMeal() {
     });
 }
 
-// Simpan resep ke favorites
 function saveToFavorites(idMeal) {
   let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
   if (!favorites.includes(idMeal)) {
@@ -59,14 +55,12 @@ function saveToFavorites(idMeal) {
   }
 }
 
-// Tampilkan modal detail resep (dengan klik luar modal)
 function showMealDetails(mealId) {
   fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`)
     .then((res) => res.json())
     .then((data) => {
       const meal = data.meals[0];
 
-      // Buat list bahan dan takaran
       let ingredients = "";
       for (let i = 1; i <= 20; i++) {
         const ingredient = meal[`strIngredient${i}`];
@@ -76,7 +70,6 @@ function showMealDetails(mealId) {
         }
       }
 
-      // Modal dengan fitur klik luar
       const overlay = document.createElement("div");
       overlay.className =
         "fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 px-4";
